@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<sqewdtv>
+		<env>
+			<directories work="/tmp/sqewdtv/work" temp="/tmp/sqewdtv/tmp" />
+		</env>
+	</sqewdtv>
+</configuration>
