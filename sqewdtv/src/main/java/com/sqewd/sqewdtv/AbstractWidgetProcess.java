@@ -28,9 +28,27 @@ public abstract class AbstractWidgetProcess {
 
 	protected ObjectState state;
 
-	protected AbstractWidgetProcess(String name) {
-		this.name = name;
+	protected long runInterval = -1;
+
+	protected long lastRunTimestamp = -1;
+
+	protected AbstractWidgetProcess() {
 		this.state = ObjectState.Unknown;
+	}
+
+	/**
+	 * Should run this widget process? Checks if the last run delta is greater
+	 * than the run interval.
+	 * 
+	 * @return
+	 */
+	public boolean doRun() {
+		if (state == ObjectState.Available) {
+			long timestamp = System.currentTimeMillis();
+			if (timestamp - lastRunTimestamp >= runInterval)
+				return true;
+		}
+		return false;
 	}
 
 	/**
@@ -44,7 +62,7 @@ public abstract class AbstractWidgetProcess {
 	 * @param state
 	 *            the state to set
 	 */
-	public void setState(ObjectState state) {
+	public void setState(final ObjectState state) {
 		this.state = state;
 	}
 
@@ -53,6 +71,14 @@ public abstract class AbstractWidgetProcess {
 	 */
 	public String getName() {
 		return name;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(final String name) {
+		this.name = name;
 	}
 
 	/**

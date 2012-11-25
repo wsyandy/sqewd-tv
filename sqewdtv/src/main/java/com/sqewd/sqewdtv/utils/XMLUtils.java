@@ -39,11 +39,10 @@ public class XMLUtils {
 	public static final String _PARAM_NODE_PARAMS_ = "./params/param";
 	public static final String _PARAM_ATTR_NAME_ = "name";
 	public static final String _PARAM_ATTR_VALUE_ = "value";
-	public static final String _PARAM_ATTR_TYPE_ = "type";
 
 	private static XPath xpath = XPathFactory.newInstance().newXPath();
 
-	public static void validate(String xmlfile, String schemaf)
+	public static void validate(final String xmlfile, final String schemaf)
 			throws Exception {
 		Source xmlsrc = new StreamSource(new File(xmlfile));
 
@@ -64,7 +63,8 @@ public class XMLUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static NodeList search(String path, Element parent) throws Exception {
+	public static NodeList search(final String path, final Element parent)
+			throws Exception {
 		// XPath Query for showing all nodes value
 		XPathExpression expr = xpath.compile(path);
 		return (NodeList) expr.evaluate(parent, XPathConstants.NODESET);
@@ -79,7 +79,7 @@ public class XMLUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HashMap<String, Object> parseParams(Element parent)
+	public static HashMap<String, Object> parseParams(final Element parent)
 			throws Exception {
 		XPath xpath = XPathFactory.newInstance().newXPath();
 		// XPath Query for showing all nodes value

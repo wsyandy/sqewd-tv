@@ -4,5 +4,11 @@
 		<env>
 			<directories work="/tmp/sqewdtv/work" temp="/tmp/sqewdtv/tmp" />
 		</env>
+		<widgets>
+			<widget name="" class="">
+				<params>
+				</params>
+			</widget>
+		</widgets>
 	</sqewdtv>
 </configuration>

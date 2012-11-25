@@ -24,19 +24,23 @@ public enum ObjectState {
 	/**
 	 * Object State Unknown.
 	 */
-	Unknown, 
+	Unknown,
 	/**
 	 * Object Initialized.
 	 */
-	Initialized, 
+	Initialized,
 	/**
 	 * Object Available for use.
 	 */
-	Available, 
+	Available,
+	/**
+	 * Object is in the process of executing a task.
+	 */
+	Executing,
 	/**
 	 * Object Disposed.
 	 */
-	Disposed, 
+	Disposed,
 	/**
 	 * Object raised exception and terminated.
 	 */
