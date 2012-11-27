@@ -65,7 +65,7 @@ public class WidgetProcessManager {
 			try {
 				state = ObjectState.Executing;
 				while (true) {
-					if (state != ObjectState.Available) {
+					if (state != ObjectState.Executing) {
 						log.info("Stopping Widget Refresh thread. [state="
 								+ state.name() + "]");
 						break;
@@ -144,7 +144,7 @@ public class WidgetProcessManager {
 		AbstractWidgetProcess wp = (AbstractWidgetProcess) wobj;
 
 		wp.setName(wn);
-		wp.init(Env.get().config());
+		wp.init(parent);
 
 		return wp;
 	}
@@ -174,13 +174,15 @@ public class WidgetProcessManager {
 
 		if (runner.state == ObjectState.Executing)
 			throw new Exception("Widget Refresh thread already running...");
+
+		state = ObjectState.Executing;
 		Thread th = new Thread(runner);
 		th.start();
 		th.join();
 	}
 
 	private List<AbstractWidgetProcess> widgetsToRun() throws Exception {
-		if (state != ObjectState.Available)
+		if (state != ObjectState.Executing)
 			throw new Exception("Object not available. [state=" + state.name()
 					+ "]");
 		List<AbstractWidgetProcess> wps = new ArrayList<AbstractWidgetProcess>();

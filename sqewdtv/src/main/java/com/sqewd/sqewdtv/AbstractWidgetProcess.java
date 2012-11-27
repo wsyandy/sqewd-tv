@@ -14,7 +14,7 @@
  */
 package com.sqewd.sqewdtv;
 
-import org.apache.commons.configuration.XMLConfiguration;
+import org.w3c.dom.Element;
 
 /**
  * Class represents an abstract widget base. All widgets should inherit from
@@ -28,7 +28,8 @@ public abstract class AbstractWidgetProcess {
 
 	protected ObjectState state;
 
-	protected long runInterval = -1;
+	protected long runInterval = 5 * 60 * 1000; // Default Refresh Interval (5
+												// mins)
 
 	protected long lastRunTimestamp = -1;
 
@@ -84,11 +85,11 @@ public abstract class AbstractWidgetProcess {
 	/**
 	 * Initialize the Widget.
 	 * 
-	 * @param config
-	 *            - Configuration handle to initialize the widget with.
+	 * @param parent
+	 *            - Parent XML node.
 	 * @throws Exception
 	 */
-	public abstract void init(XMLConfiguration config) throws Exception;
+	public abstract void init(Element parent) throws Exception;
 
 	/**
 	 * Run the widget process.
