@@ -1,8 +1,10 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/home_wallpaper"
+    android:orientation="vertical"
+    android:weightSum="100"
     tools:context=".HomeScreenActivity" >
 
     <!--
@@ -11,13 +13,17 @@
          TextureView, etc.
     -->
 
-    <TableRow
+    <LinearLayout
         android:id="@+id/home_row_Notification"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:fitsSystemWindows="true"
-        android:gravity="center|right" >
+        android:layout_weight="4"
+        android:gravity="top|right"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15dp" />
 
         <LinearLayout
             android:id="@+id/home_NotificationControl"
@@ -143,159 +149,174 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
         android:id="@+id/home_row_Content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="80"
-        android:fitsSystemWindows="true" >
-
-        <LinearLayout
-            android:id="@+id/lay_panelContext"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:gravity="top|left" >
-        </LinearLayout>
+        android:layout_weight="92" >
 
         <LinearLayout
             android:id="@+id/lay_panelContent"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="90"
+            android:layout_height="fill_parent"
             android:gravity="top|left" >
         </LinearLayout>
-        <!--
-         This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows.
-        -->
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
         android:id="@+id/home_row_Controls"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:fitsSystemWindows="true"
-        android:gravity="center|left"
+        android:layout_weight="4"
+        android:gravity="bottom|left"
         android:orientation="vertical" >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center|left" >
+            android:gravity="center|left"
+            android:orientation="vertical" >
 
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" >
-            </TextView>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/line_homeControl" />
 
-            <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/dbtn_Home_Videos"
-                    android:layout_width="fill_parent"
-                    android:layout_height="60dp"
-                    android:background="@color/bg_homeBtn_Red"
-                    android:drawableLeft="@drawable/btn_video"
-                    android:gravity="center"
-                    android:keepScreenOn="true"
-                    android:text="@string/btn_home_Media"
-                    android:textColor="@color/txt_homeBtn"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:typeface="monospace" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp" />
 
             <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="wrap_content" >
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left" >
 
                 <TextView
-                    android:id="@+id/dbtn_Home_Music"
-                    android:layout_width="fill_parent"
-                    android:layout_height="60dp"
-                    android:background="@color/bg_homeBtn_Green"
-                    android:drawableLeft="@drawable/btn_social"
-                    android:gravity="center"
-                    android:keepScreenOn="true"
-                    android:text="@string/btn_home_Social"
-                    android:textColor="@color/txt_homeBtn"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:typeface="monospace" />
-            </LinearLayout>
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" >
+                </TextView>
 
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" >
 
-            <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/dbtn_Home_Games"
-                    android:layout_width="fill_parent"
-                    android:layout_height="60dp"
-                    android:background="@color/bg_homeBtn_Yellow"
-                    android:drawableLeft="@drawable/btn_games"
-                    android:gravity="center"
-                    android:keepScreenOn="true"
-                    android:text="@string/btn_home_Games"
-                    android:textColor="@color/txt_homeBtn"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:typeface="monospace" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/dbtn_Home_Videos"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/bg_homeBtn_Red"
+                        android:drawableLeft="@drawable/btn_video"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:text="@string/btn_home_Media"
+                        android:textColor="@color/txt_homeBtn"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/dbtn_Home_Apps"
-                    android:layout_width="fill_parent"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/dbtn_Home_Music"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/bg_homeBtn_Green"
+                        android:drawableLeft="@drawable/btn_social"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:text="@string/btn_home_Social"
+                        android:textColor="@color/txt_homeBtn"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/dbtn_Home_Games"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/bg_homeBtn_Yellow"
+                        android:drawableLeft="@drawable/btn_games"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:text="@string/btn_home_Games"
+                        android:textColor="@color/txt_homeBtn"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/dbtn_Home_Apps"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/bg_homeBtn_Blue"
+                        android:drawableLeft="@drawable/btn_apps"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:text="@string/btn_home_Apps"
+                        android:textColor="@color/txt_homeBtn"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_HomeHome"
+                    android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/bg_homeBtn_Blue"
-                    android:drawableLeft="@drawable/btn_apps"
-                    android:gravity="center"
-                    android:keepScreenOn="true"
-                    android:text="@string/btn_home_Apps"
-                    android:textColor="@color/txt_homeBtn"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:typeface="monospace" />
+                    android:background="@drawable/btn_home"
+                    android:contentDescription="@string/dsc_HomeScreen" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_HomeWeb"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_brower"
+                    android:contentDescription="@string/dsc_HomeBrowser" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btn_HomeHome"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/btn_home"
-                android:contentDescription="@string/dsc_HomeScreen" />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp" />
         </LinearLayout>
-    </TableRow>
+    </LinearLayout>
 
-</TableLayout>
+</LinearLayout>

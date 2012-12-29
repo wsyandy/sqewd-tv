@@ -67,9 +67,9 @@ public class HomeScreenActivity extends Activity implements Runnable {
 	protected void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		try {
-			HomeEnv.create(this);
-
 			setContentView(R.layout.activity_home_screen);
+
+			HomeEnv.create(this);
 
 			final View contentView = findViewById(R.id.lay_panelContent);
 
@@ -171,7 +171,7 @@ public class HomeScreenActivity extends Activity implements Runnable {
 				runner.start();
 			}
 		} catch (Exception e) {
-			Log.e(ACTIVITY_SERVICE, e.getLocalizedMessage());
+			Log.e("sqewdTv", e.getLocalizedMessage());
 			LogHelper.stacktrace(e);
 		}
 	}

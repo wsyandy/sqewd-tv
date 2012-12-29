@@ -33,19 +33,22 @@ public class HomeEnv {
 
 	private void init(final Activity parent) throws Exception {
 		Display display = parent.getWindowManager().getDefaultDisplay();
-		display.getSize(displaySize);
+		if (display != null) {
+			display.getSize(displaySize);
 
-		if (displaySize.x >= 1080) {
-			displayType = DisplayType.TV1080p;
-		} else if (displaySize.x >= 720) {
-			displayType = DisplayType.TV720p;
-		} else {
-			displayType = DisplayType.Unsupported;
-			throw new Exception("Display size [" + displaySize.y + "x"
-					+ displaySize.x + "] not supported.");
-		}
-		Log.d("DISPLAY TYPE", displayType.name());
-		Log.d("DISPLAY SIZE", displaySize.toString());
+			if (displaySize.x >= 1080) {
+				displayType = DisplayType.TV1080p;
+			} else if (displaySize.x >= 720) {
+				displayType = DisplayType.TV720p;
+			} else {
+				displayType = DisplayType.Unsupported;
+				throw new Exception("Display size [" + displaySize.y + "x"
+						+ displaySize.x + "] not supported.");
+			}
+			Log.d("DISPLAY TYPE", displayType.name());
+			Log.d("DISPLAY SIZE", displaySize.toString());
+		} else
+			throw new Exception("Error getting display handle.");
 	}
 
 	public Point getDisplaySize() {

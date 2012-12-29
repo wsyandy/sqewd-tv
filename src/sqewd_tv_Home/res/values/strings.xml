@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">sqewdTv Home</string>
+    <string name="app_name">Welcome to sqewdTv</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="btn_home_Media">Media</string>
     <string name="btn_home_Social">Social</string>
     <string name="btn_home_Games">Games</string>
     <string name="btn_home_Apps">Apps</string>
 	<string name="dsc_HomeScreen">Go To Home Screen</string>
+	<string name="dsc_HomeBrowser">Open Web Browser</string>
 	<string name="dsc_Search">Search</string>
 	<string name="txt_AC_Search">Search</string>
 </resources>

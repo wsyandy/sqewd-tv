@@ -1,6 +1,6 @@
 *.class
-*/target/*
-
+bin/
+gen/
 # Eclipse Project Files #
 .metadata/*
 .*
