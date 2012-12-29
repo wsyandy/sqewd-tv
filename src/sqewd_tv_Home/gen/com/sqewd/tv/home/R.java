@@ -31,30 +31,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class drawable {
         public static final int btn_apps=0x7f020000;
-        public static final int btn_games=0x7f020001;
-        public static final int btn_home=0x7f020002;
-        public static final int btn_music=0x7f020003;
-        public static final int btn_search=0x7f020004;
-        public static final int btn_social=0x7f020005;
-        public static final int btn_video=0x7f020006;
-        public static final int home_wallpaper=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
+        public static final int btn_brower=0x7f020001;
+        public static final int btn_games=0x7f020002;
+        public static final int btn_home=0x7f020003;
+        public static final int btn_music=0x7f020004;
+        public static final int btn_search=0x7f020005;
+        public static final int btn_social=0x7f020006;
+        public static final int btn_video=0x7f020007;
+        public static final int home_wallpaper=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
     }
     public static final class id {
         public static final int ac_NotSearchText=0x7f070012;
-        public static final int btn_HomeHome=0x7f07001c;
+        public static final int btn_HomeHome=0x7f07001b;
+        public static final int btn_HomeWeb=0x7f07001c;
         public static final int btn_NotSearch=0x7f070013;
-        public static final int dbtn_Home_Apps=0x7f07001b;
-        public static final int dbtn_Home_Games=0x7f07001a;
-        public static final int dbtn_Home_Music=0x7f070019;
-        public static final int dbtn_Home_Videos=0x7f070018;
+        public static final int dbtn_Home_Apps=0x7f07001a;
+        public static final int dbtn_Home_Games=0x7f070019;
+        public static final int dbtn_Home_Music=0x7f070018;
+        public static final int dbtn_Home_Videos=0x7f070017;
         public static final int home_NotificationControl=0x7f070001;
         public static final int home_NotificationView=0x7f070002;
         public static final int home_row_Content=0x7f070014;
-        public static final int home_row_Controls=0x7f070017;
+        public static final int home_row_Controls=0x7f070016;
         public static final int home_row_Notification=0x7f070000;
-        public static final int lay_panelContent=0x7f070016;
-        public static final int lay_panelContext=0x7f070015;
+        public static final int lay_panelContent=0x7f070015;
         public static final int nv_holder_01=0x7f070004;
         public static final int nv_holder_02=0x7f070005;
         public static final int nv_holder_03=0x7f070006;
@@ -80,10 +81,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int btn_home_Games=0x7f050004;
         public static final int btn_home_Media=0x7f050002;
         public static final int btn_home_Social=0x7f050003;
+        public static final int dsc_HomeBrowser=0x7f050007;
         public static final int dsc_HomeScreen=0x7f050006;
-        public static final int dsc_Search=0x7f050007;
+        public static final int dsc_Search=0x7f050008;
         public static final int dummy_content=0x7f050001;
-        public static final int txt_AC_Search=0x7f050008;
+        public static final int txt_AC_Search=0x7f050009;
     }
     public static final class style {
         /** 
