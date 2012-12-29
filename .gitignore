@@ -1,7 +1,12 @@
 *.class
+
 # Eclipse Project Files #
 .metadata/*
 .*
+
+# Android Generated Files #
+bin/
+gen/
 
 # Package Files #
 *.jar
