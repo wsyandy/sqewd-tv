@@ -1,0 +1,9 @@
+BBC.NEWS.TOPSTORIES;BBC News (Top Stories);http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml;news.topstries
+BBC.NEWS.WORLD;BBC News (World);http://feeds.bbci.co.uk/news/video_and_audio/world/rss.xml;news.world
+BBC.NEWS.BUSINESS;BBC News (Business);http://feeds.bbci.co.uk/news/video_and_audio/business/rss.xml;news.business
+BBC.NEWS.POLITICS;BBC News (Politics);http://feeds.bbci.co.uk/news/video_and_audio/politics/rss.xml;news.politics
+BBC.NEWS.HEALTH;BBC News (Health);http://feeds.bbci.co.uk/news/video_and_audio/health/rss.xml;news.health
+BBC.NEWS.SCIENCE;BBC News (Science);http://feeds.bbci.co.uk/news/video_and_audio/science_and_environment/rss.xml;news.science
+BBC.NEWS.TECHNOLOGY;BBC News (Technology);http://feeds.bbci.co.uk/news/video_and_audio/technology/rss.xml;news.technology
+BBC.NEWS.ARTS;BBC News (Arts & Entertainment);http://feeds.bbci.co.uk/news/video_and_audio/entertainment_and_arts/rss.xml;news.arts
+

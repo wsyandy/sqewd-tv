@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">sqewd Tv Launcher</string>
+    <string name="btn_home_Media">Media</string>
+    <string name="btn_home_Social">Social</string>
+    <string name="btn_home_Games">Games</string>
+    <string name="btn_home_Apps">Apps</string>
+	<string name="dsc_HomeScreen">Go To Home Screen</string>
+	<string name="dsc_HomeBrowser">Open Web Browser</string>
+	<string name="dsc_Search">Search</string>
+	<string name="txt_AC_Search">Enter Search</string>
+	<string name="svc_WebVideoSearch">Web Video Search</string>
+	<!-- Text Localization -->
+	<string name="com_sqewd_tv_home_AppsSortPreference_ByName">Sort By Name (Default)</string>
+	<string name="com_sqewd_tv_home_AppsSortPreference_ByDate">Sort By Date Installed</string>
+	<string name="com_sqewd_tv_home_AppsSortPreference_ByUsage">Sort By App Usage</string>
+</resources>

@@ -1,0 +1,393 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/home_wallpaper"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".HomeScreenActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <LinearLayout
+        android:id="@+id/home_row_Notification"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="top|right"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/home_HeaderControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingTop="5dp"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:id="@+id/home_HeaderView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="90"
+                android:gravity="left|center_vertical"
+                android:weightSum="100" >
+
+                <Button
+                    android:id="@+id/btn_HomePower"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_power"
+                    android:contentDescription="@string/dsc_HomeBrowser" />
+
+                <TextView
+                    android:id="@+id/txt_NotDate"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:text="December, 29 2012 13:52:20"
+                    android:textColor="@color/txt_homeBtn"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <LinearLayout
+                    android:id="@+id/home_HeaderPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/home_HeaderInfoPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_HeaderSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/ac_HeaderSearchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="12"
+                    android:text="@string/txt_AC_Search"
+                    android:textColor="@color/txt_SearchDefaultText"
+                    android:typeface="monospace" />
+
+                <Button
+                    android:id="@+id/btn_HeaderSearch"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_search"
+                    android:contentDescription="@string/dsc_Search" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_row_Content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="93" >
+
+        <LinearLayout
+            android:id="@+id/lay_panelContent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="top|left" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/home_row_Controls"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:rowCount="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_homeControl" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageButton
+                            android:id="@+id/btn_Home_Media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_media" />
+
+                        <TextView
+                            android:id="@+id/dbtn_Home_Media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center_vertical"
+                            android:keepScreenOn="true"
+                            android:text="@string/btn_home_Media"
+                            android:textColor="@color/txt_homeBtn"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:typeface="monospace" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/bg_homeBtn_Red" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp" />
+
+                    <View
+                        android:id="@+id/dbtn_Home_MediaSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageButton
+                            android:id="@+id/btn_Home_Social"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_social" />
+
+                        <TextView
+                            android:id="@+id/dbtn_Home_Social"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center_vertical"
+                            android:keepScreenOn="true"
+                            android:text="@string/btn_home_Social"
+                            android:textColor="@color/txt_homeBtn"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:typeface="monospace" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/bg_homeBtn_Green" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp" />
+
+                    <View
+                        android:id="@+id/dbtn_Home_SocialSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageButton
+                            android:id="@+id/btn_Home_Games"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_games" />
+
+                        <TextView
+                            android:id="@+id/dbtn_Home_Games"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center_vertical"
+                            android:keepScreenOn="true"
+                            android:text="@string/btn_home_Games"
+                            android:textColor="@color/txt_homeBtn"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:typeface="monospace" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/bg_homeBtn_Yellow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp" />
+
+                    <View
+                        android:id="@+id/dbtn_Home_GamesSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageButton
+                            android:id="@+id/btn_Home_Apps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_apps" />
+
+                        <TextView
+                            android:id="@+id/dbtn_Home_Apps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:keepScreenOn="true"
+                            android:text="@string/btn_home_Apps"
+                            android:textColor="@color/txt_homeBtn"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:typeface="monospace" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/bg_homeBtn_Blue" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp" />
+
+                    <View
+                        android:id="@+id/dbtn_Home_AppsSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp" >
+
+                    <Button
+                        android:id="@+id/btn_HomeWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_browser"
+                        android:contentDescription="@string/dsc_HomeBrowser" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp" />
+
+                    <View
+                        android:id="@+id/btn_HomeWebSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp" >
+
+                    <Button
+                        android:id="@+id/btn_HomeHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_home"
+                        android:contentDescription="@string/dsc_HomeScreen" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp" />
+
+                    <View
+                        android:id="@+id/btn_HomeHomeSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/txt_homeBtn"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </GridLayout>
+
+</LinearLayout>
